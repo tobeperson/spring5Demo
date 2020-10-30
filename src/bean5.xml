@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="stu" class="com.tobeace.spring5.collectiontype.Student">
+    <property name="course">
+        <array>
+            <value>小猫咪数学课</value>
+            <value>小猫咪钓鱼课</value>
+        </array>
+    </property>
+    <property name="list">
+    <list>
+        <ref bean="course1"></ref>
+        <ref bean="course2"></ref>
+    </list>
+    </property>
+    <property name="maps">
+      <map>
+          <entry key="数学课考试" value="99分"></entry>
+          <entry key="钓鱼课考试" value="五条鱼"></entry>
+      </map>
+    </property>
+    <property name="sets">
+        <set>
+          <value>昨天考试</value>
+          <value>今天考试</value>
+        </set>
+    </property>
+</bean>
+    <bean id="course1" class="com.tobeace.spring5.collectiontype.Course">
+        <property name="cname" value="数学课"></property>
+    </bean>
+    <bean id="course2" class="com.tobeace.spring5.collectiontype.Course">
+        <property name="cname" value="钓鱼课"></property>
+    </bean>
+</beans>

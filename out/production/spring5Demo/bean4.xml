@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="emp" class="com.tobeace.spring5.bean.Employee">
+        <property name="ename" value=" 袁小萱"></property>
+        <property name="gender" value="女"></property>
+        <property name="department" ref="dept"></property>
+        <property name="department.dname" value="外语部"></property>
+    </bean>
+    <bean name="dept" class="com.tobeace.spring5.bean.Department">
+        <property name="dname" value="财务部"></property>
+    </bean>
+</beans>
